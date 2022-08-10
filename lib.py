@@ -26,3 +26,18 @@ def speak(frase, name, speed=None):
     )
 
     tts.save('./assets/tts' + name + '.mp3')
+
+
+def countdown(start, screensize):
+    videoList = []
+    counter = 0
+    for i in range(start, 0, -1):
+        videoList.append(
+            writeText(str(i)).set_start(counter).set_end(counter + 1)
+        )
+        counter += 1
+
+    return CompositeVideoClip(
+        videoList,
+        size=screensize
+    )

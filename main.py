@@ -33,16 +33,7 @@ firstClip = CompositeVideoClip(
             ("center", 140)),
         writeText(emojis, fontSize=50, size=[
                   321, 65]).set_start(5).set_position("center", 350),
-        writeText("5").set_start(
-            startCounter).set_end(startCounter + 1).set_position(("center", 500)),
-        writeText("4").set_start(
-            startCounter + 1).set_end(startCounter + 2).set_position(("center", 500)),
-        writeText("3").set_start(
-            startCounter + 2).set_end(startCounter + 3).set_position(("center", 500)),
-        writeText("2").set_start(
-            startCounter + 3).set_end(startCounter + 4).set_position(("center", 500)),
-        writeText("1").set_start(
-            startCounter + 4).set_end(startCounter + 5).set_position(("center", 500))
+        countdown(startCounter, screensize)
     ],
     size=screensize
 ).set_duration(totalAudio.duration).on_color(color=(255, 255, 255)).set_audio(totalAudio).set_fps(24)

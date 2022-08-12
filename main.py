@@ -57,4 +57,5 @@ finalClip = concatenate_videoclips(
     ]
 )
 
-finalClip.write_videofile("teste.mp4", fps=24)
+finalClip.write_videofile("./videos/teste.mp4", fps=24)
+

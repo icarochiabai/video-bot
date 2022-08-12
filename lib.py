@@ -1,6 +1,8 @@
+from distutils.command.upload import upload
 from moviepy.editor import *
 from gtts import gTTS
 from youtube_dl import YoutubeDL
+from upload_video import *
 
 
 def writeText(text, fontSize=28, size=None):
@@ -26,3 +28,13 @@ def speak(frase, name, speed=None):
     )
 
     tts.save('./assets/tts' + name + '.mp3')
+
+
+
+def uploadYt(file,title,description,categorieId,keywords):
+    #24 = 
+    args = f"Namespace(file='{file}', title='{title}', description='{description}', category='{categorieId}', keywords='{keywords}', privacyStatus='private')"
+    
+    upload(file,title,description,categorieId,keywords)
+
+    

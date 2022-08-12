@@ -3,3 +3,5 @@ assets/*
 teste.mp4
 teste.webm
 __pycache__
+env.py
+client_secret.json

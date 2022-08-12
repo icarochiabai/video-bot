@@ -1,0 +1,1 @@
+python upload_video.py --file="./teste.mp4" --title="Videos engraçados" --description="Duvido você adivinhar a musica" --keywords="engraçado,meme,piada,rir" --category="24"  --privacyStatus="private"
